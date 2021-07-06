@@ -37,10 +37,6 @@ while game_is_on:
         scoreboard.game_over()
 
     # Detect collision with the tail
-    # if head collides with any segment in tail,
-    # trigger goes over
-    # if segment == snake.head:
-    #     pass
     for segment in snake.segments[1:]:  # get every segment except the first segment
         if snake.head.distance(segment) < 10:
             game_is_on = False
